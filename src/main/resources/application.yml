@@ -1,0 +1,27 @@
+
+## Prevent JPA from trying to Initialize...:
+# spring.jpa.database=postgres
+## ... and do not Auto-Detect the Database:
+#spring.datasource.initialize=false
+spring:
+  jpa:
+    database: postgresql
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    initialize: false
+hibernate:
+  temp:
+    use_jdbc_metadata_defaults: false
+
+
+#tenants
+
+tenants:
+  datasource:
+    classname: org.postgresql.ds.PGSimpleDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/tenants
+    username: postgres
+    password: root
