@@ -25,9 +25,9 @@ public class DataSourceResolver {
 
     public void setDataSource(String tenant) {
         if (!tenants.containsKey(tenant)) {
-            tenants.put(tenant, getDataSource(tenant));
             dataSource.setTargetDataSources(tenants);
             dataSource.afterPropertiesSet();
+            tenants.put(tenant, getDataSource(tenant));
         }
     }
 

@@ -19,9 +19,9 @@ hibernate:
 
 #tenants
 
-tenants:
-  datasource:
-    classname: org.postgresql.ds.PGSimpleDataSource
-    url: jdbc:postgresql://127.0.0.1:5432/tenants
-    username: postgres
-    password: root
+      tenants:
+        datasource:
+          classname: org.postgresql.ds.PGSimpleDataSource
+          url: jdbc:postgresql://127.0.0.1:5432/tenants
+          username: postgres
+          password: root
